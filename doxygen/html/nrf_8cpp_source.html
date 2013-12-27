@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>nrf: Código-Fonte de nrf.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">nrf
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&#160;membro</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valores da enumeração</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">nrf.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="nrf_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="nrf_8h.html" title="Arquivo de definições da classe.">nrf.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classnrf.html#a2c8892435262e4e586346ab1642cfb23">   19</a></span>&#160;<a class="code" href="classnrf.html#a2c8892435262e4e586346ab1642cfb23" title="Construtor da classe.">nrf::nrf</a>(uint8_t ce, uint8_t csn){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classnrf.html#a65df277c87190fb9ec66f4855edf61d5">nrf::_ce</a> = ce;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">nrf::_csn</a> = csn;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    pinMode(<a class="code" href="classnrf.html#a65df277c87190fb9ec66f4855edf61d5">_ce</a>, OUTPUT);   <span class="comment">// setup ce pin</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classnrf.html#a0093820dc7978c8cb33ea250e8847705" title="Desabilita o dispositivo.">nrf::chip_disable</a>();    <span class="comment">// chip no modo &#39;POWER_DOWN&#39;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                            <span class="comment">// após o &#39;power on reset&#39;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="spidrv_8cpp.html#a14fbc64c3ff224793c68845edec8c826" title="Configura e inicia interface SPI.">spi_begin</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>);    <span class="comment">// configura e inicia a interface SPI</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>,<a class="code" href="nordic_8h.html#aece57618cf42f6b1b520341ef19a66f8">EN_CRC</a>); <span class="comment">// bits PWR_UP=0 e PRIM_RX=0</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> = <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa5faf80fb9a04b5744294ce86cfff7a9d">NRF_POWER_DOWN</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classnrf.html#a507bd00d0183aaca131e672fdeabf073">_last_mode</a> = <a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    delay(100);  <span class="comment">// assegura atraso no &#39;power on reset&#39;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classnrf.html#a674251450acee6d20090741155f793fa" title="Descarrega buffer de recepção.">nrf::flush_rx_fifo</a>();   <span class="comment">// limpa buffer de recepção</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classnrf.html#a89449d9aadc1957b3f6631780822f8be" title="Descarrega buffer de transmissão.">nrf::flush_tx_fifo</a>();   <span class="comment">// limpa buffer de transmissão</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classnrf.html#a08d4decf99a5cc9f04697ec0b8cad1c3" title="Limpa todos os flags de interrupção.">nrf::clear_all_int_flags</a>(); <span class="comment">// limpa flags de interrupção</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classnrf.html#a27c13335cdcd46659337e232f97f663c">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a27c13335cdcd46659337e232f97f663c" title="Habilita o dispositivo.">nrf::chip_enable</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    digitalWrite(<a class="code" href="classnrf.html#a65df277c87190fb9ec66f4855edf61d5">_ce</a>,HIGH);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="classnrf.html#a0093820dc7978c8cb33ea250e8847705">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a0093820dc7978c8cb33ea250e8847705" title="Desabilita o dispositivo.">nrf::chip_disable</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    digitalWrite(<a class="code" href="classnrf.html#a65df277c87190fb9ec66f4855edf61d5">_ce</a>,LOW);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59">   70</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(uint8_t register_addr, uint8_t data){</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    uint8_t buff[2];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    buff[0] = <a class="code" href="nordic_8h.html#a3b68b214d5753039d2c156ad57cd7153">W_REGISTER</a> | (register_addr &amp; 0x1F);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    buff[1]=data; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>, buff, <span class="keyword">sizeof</span>(buff));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> buff[0]; <span class="comment">//retorna estado</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="classnrf.html#abbed07bbeb60fb2090f2ffba58fab16b">   90</a></span>&#160;uint8_t <a class="code" href="classnrf.html#abbed07bbeb60fb2090f2ffba58fab16b" title="Escreve um bloco de dados no registrador.">nrf::spi_write_multibyte_register</a>(uint8_t register_addr, uint8_t *buff, uint8_t length){</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    uint8_t tmp[length+1];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    tmp[0]= <a class="code" href="nordic_8h.html#a3b68b214d5753039d2c156ad57cd7153">W_REGISTER</a> | (register_addr &amp; 0x1F);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;length;i++)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        tmp[i+1]=*buff++; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>, tmp, <span class="keyword">sizeof</span>(tmp));</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> tmp[0];</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}  </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53">  110</a></span>&#160;uint8_t <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(uint8_t register_addr, uint8_t *data){</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    uint8_t buff[2];</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    buff[0] = <a class="code" href="nordic_8h.html#afb0b251378d3b14c508e51fd2c3157d6">R_REGISTER</a> | (register_addr &amp; 0x1F);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>, buff, <span class="keyword">sizeof</span>(buff));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    *data = buff[1];</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> buff[0];</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="classnrf.html#adc8177b853777e3fe0eb806ff57971f2">  131</a></span>&#160;uint8_t <a class="code" href="classnrf.html#adc8177b853777e3fe0eb806ff57971f2" title="Lê um bloco de dados do registrador.">nrf::spi_read_multibyte_register</a>(uint8_t register_addr, uint8_t *buff, uint8_t length){</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    uint8_t data[length+1];</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    data[0]=<a class="code" href="nordic_8h.html#afb0b251378d3b14c508e51fd2c3157d6">R_REGISTER</a> | (register_addr &amp; 0x1F);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>, data, <span class="keyword">sizeof</span>(data));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;length;i++)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        buff[i]=data[i+1];</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> data[0];</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="code" href="classnrf.html#ae6a283eddcb49ab5203fa23d85a39f5c">  149</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#ae6a283eddcb49ab5203fa23d85a39f5c" title="Configura o canal de RF.">nrf::set_rf_channel</a>(uint8_t rf_channel){</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a5c4da84e4a01531aa9f5c3e617848d66">RF_CH</a>, rf_channel &amp; 0x7F);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="code" href="classnrf.html#a1c99461d7ea34e2369d32b98b6e29e1e">  161</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a1c99461d7ea34e2369d32b98b6e29e1e" title="Retorna o canal de RF.">nrf::get_rf_channel</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    uint8_t channel;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a5c4da84e4a01531aa9f5c3e617848d66">RF_CH</a>, &amp;channel);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">return</span> channel;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="code" href="classnrf.html#aa3d1221c69625052f8c4404c2be6d471">  183</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#aa3d1221c69625052f8c4404c2be6d471" title="Configura a potência do sinal de RF.">nrf::set_rf_power</a>(<a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580a">nrf_power_t</a> power){</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    uint8_t lastValue;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ad95edb7665f39454d7d7fd436301712b">RF_SETUP</a>, &amp;lastValue);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#ad95edb7665f39454d7d7fd436301712b">RF_SETUP</a>, (lastValue &amp; ~<a class="code" href="nordic_8h.html#a1e9fa887f1cf285bc00c17e49569e5f5">RF_PWR</a>) | ( ( (uint8_t) power ) &lt;&lt; 1) );</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="code" href="classnrf.html#a21b2fe0aa960eee7a7d4d35af23b4498">  202</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a21b2fe0aa960eee7a7d4d35af23b4498" title="Retorna a potência atual do sinal de RF.">nrf::get_rf_power</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    uint8_t reg;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ad95edb7665f39454d7d7fd436301712b">RF_SETUP</a>,&amp;reg);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">return</span> (reg &amp; <a class="code" href="nordic_8h.html#a1e9fa887f1cf285bc00c17e49569e5f5">RF_PWR</a>) &gt;&gt; 1;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="code" href="classnrf.html#a134b5083e12fd69e59ddd7c4ec1f86fb">  221</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a134b5083e12fd69e59ddd7c4ec1f86fb" title="Configura a taxa de dados (bps)">nrf::set_rf_datarate</a>(<a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290">nrf_datarate_t</a> speed){</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    uint8_t lastValue;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ad95edb7665f39454d7d7fd436301712b">RF_SETUP</a>,&amp;lastValue);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">switch</span>(speed){</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290adf64314d3a006c1be7fe60845621bc2e">NRF_250KBPS</a>:</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#ad95edb7665f39454d7d7fd436301712b">RF_SETUP</a>, (lastValue &amp; ~<a class="code" href="nordic_8h.html#ace5cdf603eecdfb4344114b589442407">RF_DR_HIGH</a>) | <a class="code" href="nordic_8h.html#abd7f2e51313a2bc4be176c747c95f8f9">RF_DR_LOW</a>);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290a31712bdb0199355f6cfe32e5467e43da">NRF_1MBPS</a>:</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#ad95edb7665f39454d7d7fd436301712b">RF_SETUP</a>, lastValue &amp; ~(<a class="code" href="nordic_8h.html#ace5cdf603eecdfb4344114b589442407">RF_DR_HIGH</a> | <a class="code" href="nordic_8h.html#abd7f2e51313a2bc4be176c747c95f8f9">RF_DR_LOW</a>));</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290a5492e0f45be9142ddfd733cef426bd20">NRF_2MBPS</a>:</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#ad95edb7665f39454d7d7fd436301712b">RF_SETUP</a>, (lastValue &amp; ~<a class="code" href="nordic_8h.html#abd7f2e51313a2bc4be176c747c95f8f9">RF_DR_LOW</a>) | <a class="code" href="nordic_8h.html#ace5cdf603eecdfb4344114b589442407">RF_DR_HIGH</a>);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="code" href="classnrf.html#a8477ed309783ba5867c0988af4c80ae0">  249</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a8477ed309783ba5867c0988af4c80ae0" title="Retorna a taxa de dados (bps) atual.">nrf::get_rf_datarate</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    uint8_t reg;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ad95edb7665f39454d7d7fd436301712b">RF_SETUP</a>, &amp;reg);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    uint8_t tmp = ((reg &amp; <a class="code" href="nordic_8h.html#abd7f2e51313a2bc4be176c747c95f8f9">RF_DR_LOW</a>)&gt;&gt;5) | ((reg &amp; <a class="code" href="nordic_8h.html#ace5cdf603eecdfb4344114b589442407">RF_DR_HIGH</a>)&gt;&gt;2);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">switch</span>(tmp){</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">return</span> 0x01; <span class="comment">//1Mbps</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">return</span> 0x00; <span class="comment">//250kbps</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">return</span> 0x02; <span class="comment">//2Mbps</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">return</span> 0x03; <span class="comment">//Reserved</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;}</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="code" href="classnrf.html#aeacf3917c80b37ede2d9d3cc51b6bf1e">  280</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#aeacf3917c80b37ede2d9d3cc51b6bf1e" title="Configura o tamanho do endereço do dispositivo.">nrf::set_address_width</a>(<a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5e">nrf_address_width_t</a> width){</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#af5ef355ba3eca336db1285cab353ddc2">SETUP_AW</a>, (uint8_t)width );</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="code" href="classnrf.html#ad9fd4f4886fcd9adc2b9fb5c843b3969">  293</a></span>&#160;uint8_t <a class="code" href="classnrf.html#ad9fd4f4886fcd9adc2b9fb5c843b3969" title="Retorna o tamanho do endereço atual.">nrf::get_address_width</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    uint8_t reg;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#af5ef355ba3eca336db1285cab353ddc2">SETUP_AW</a>, &amp;reg);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">return</span> reg+2;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="code" href="classnrf.html#adef0ba1bf3e125d353e930708b94d51d">  313</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#adef0ba1bf3e125d353e930708b94d51d" title="Habilita pipe.">nrf::enable_rx_pipe</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, <span class="keywordtype">bool</span> auto_ack){</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    uint8_t reg;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ab6b2378ce9cab6ccafb6d30c774c5307">EN_RXADDR</a>, &amp;reg);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#ab6b2378ce9cab6ccafb6d30c774c5307">EN_RXADDR</a>, reg | <a class="code" href="nordic_8h.html#a83ee7fd3f13e5f09c1285246a3ea2a38">BIT</a>((uint8_t)pipe));</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#aa84a282351a2c9b83dd653df6ac59216">EN_AA</a>, &amp;reg);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">if</span>(auto_ack){</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#aa84a282351a2c9b83dd653df6ac59216">EN_AA</a>, reg | <a class="code" href="nordic_8h.html#a83ee7fd3f13e5f09c1285246a3ea2a38">BIT</a>((uint8_t)pipe));</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#aa84a282351a2c9b83dd653df6ac59216">EN_AA</a>, reg &amp; ~<a class="code" href="nordic_8h.html#a83ee7fd3f13e5f09c1285246a3ea2a38">BIT</a>((uint8_t)pipe) );</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="code" href="classnrf.html#a75eeb6beac7627bac9341637ef7c4ef1">  334</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a75eeb6beac7627bac9341637ef7c4ef1" title="Desabilita pipe.">nrf::disable_rx_pipe</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe){</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    uint8_t reg;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ab6b2378ce9cab6ccafb6d30c774c5307">EN_RXADDR</a>, &amp;reg);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#ab6b2378ce9cab6ccafb6d30c774c5307">EN_RXADDR</a>, reg &amp; ~<a class="code" href="nordic_8h.html#a83ee7fd3f13e5f09c1285246a3ea2a38">BIT</a>((uint8_t)pipe));</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#aa84a282351a2c9b83dd653df6ac59216">EN_AA</a>, &amp;reg);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#aa84a282351a2c9b83dd653df6ac59216">EN_AA</a>, reg &amp; ~<a class="code" href="nordic_8h.html#a83ee7fd3f13e5f09c1285246a3ea2a38">BIT</a>((uint8_t)pipe) );</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="code" href="classnrf.html#aceb25880996640f22d4e71ac254e0eae">  356</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#aceb25880996640f22d4e71ac254e0eae" title="Configura endereços de recepção.">nrf::set_rx_address</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, uint8_t *addr, uint8_t length){</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">switch</span>(pipe){</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4abaeb8791fe0342cade8db09107b1aed0">NRF_PIPE0</a>:</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a1fae01fbfff1b88562ba4aae2ac8c9cf">NRF_PIPE1</a>:</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="classnrf.html#abbed07bbeb60fb2090f2ffba58fab16b" title="Escreve um bloco de dados no registrador.">nrf::spi_write_multibyte_register</a>( <a class="code" href="nordic_8h.html#adc82a1b0dee303d8b783b9b9a89ae5aa">RX_ADDR_P0</a> + (uint8_t) pipe, addr, length);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4af7db4e291ec2c6c15060cc5426b92eba">NRF_PIPE2</a>:</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a919be87ccfa5209894438c2cc1b9bcd9">NRF_PIPE3</a>:</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4ab7495b387ec5cb15aaab4a331a0c69c4">NRF_PIPE4</a>:</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a99787dedcb3526eb415f244952205339">NRF_PIPE5</a>:</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#adc82a1b0dee303d8b783b9b9a89ae5aa">RX_ADDR_P0</a> + (uint8_t) pipe, *addr);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno"><a class="code" href="classnrf.html#a95d9ebd55679064effbdd2d83305ac98">  380</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a95d9ebd55679064effbdd2d83305ac98" title="Configura o tamanho do payload para recepção.">nrf::set_static_payload_width</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, uint8_t width){</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a060e61d8f6e7ad28984540faa85cdecf">RX_PW_P0</a> + (uint8_t) pipe, width &amp; 0x3F);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="code" href="classnrf.html#a27ec9c936d039ea105d37d02ecd3f38e">  394</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a27ec9c936d039ea105d37d02ecd3f38e" title="Retorna o tamanho do payload.">nrf::get_static_payload_width</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe){</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    uint8_t reg;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a060e61d8f6e7ad28984540faa85cdecf">RX_PW_P0</a> + (uint8_t) pipe, &amp;reg);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">return</span> reg;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00411"></a><span class="lineno"><a class="code" href="classnrf.html#af038fc525d5702ff533cd5bd014ab5ee">  411</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#af038fc525d5702ff533cd5bd014ab5ee" title="Configura o endereço de transmissão.">nrf::set_tx_address</a>(uint8_t *addr, uint8_t length){</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <a class="code" href="classnrf.html#abbed07bbeb60fb2090f2ffba58fab16b" title="Escreve um bloco de dados no registrador.">nrf::spi_write_multibyte_register</a>(<a class="code" href="nordic_8h.html#aa734c6e08b9f794436eacbabe466a6c4">TX_ADDR</a>, addr, length);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;}</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
+<div class="line"><a name="l00427"></a><span class="lineno"><a class="code" href="classnrf.html#a134acc1d52019ede259b915869c0bf5b">  427</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a134acc1d52019ede259b915869c0bf5b" title="Configura os parâmetros de retransmissão.">nrf::set_retr_param</a>(uint8_t retr_count, uint8_t retr_delay){</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a2188309b3eceeae158dd64109cd919aa">SETUP_RETR</a>, ((retr_delay &amp; 0x0F)&lt;&lt;4) | (retr_count &amp; 0x0F) );</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;}</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
+<div class="line"><a name="l00438"></a><span class="lineno"><a class="code" href="classnrf.html#a6514e7743c8d8845132a16aa2de164a1">  438</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a6514e7743c8d8845132a16aa2de164a1" title="Retorna os parâmetros de retransmissão.">nrf::get_retr_param</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    uint8_t reg;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a2188309b3eceeae158dd64109cd919aa">SETUP_RETR</a>, &amp;reg);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordflow">return</span> reg;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;}</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno"><a class="code" href="classnrf.html#a36b6dcf9a7457520622369ec7d0efc26">  454</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a36b6dcf9a7457520622369ec7d0efc26" title="Seleciona o argoritmo de cálculo do CRC.">nrf::set_crc_mode</a>(<a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2">nrf_crc_mode_t</a> crc_mode){</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    uint8_t lastValue;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, &amp;lastValue);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordflow">switch</span>(crc_mode){</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2a78c60fab5bf7a6db66a73b479188aa78">NRF_CRC_1BYTE</a>:</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, (lastValue &amp; ~<a class="code" href="nordic_8h.html#a253dd73b17f0ea7f71e55f52e796836a">CRCO</a>) | <a class="code" href="nordic_8h.html#aece57618cf42f6b1b520341ef19a66f8">EN_CRC</a>);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2a7e2d319c6823ee1064d257c2129e5f31">NRF_CRC_2BYTES</a>:</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, lastValue | <a class="code" href="nordic_8h.html#a253dd73b17f0ea7f71e55f52e796836a">CRCO</a> | <a class="code" href="nordic_8h.html#aece57618cf42f6b1b520341ef19a66f8">EN_CRC</a>);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    }</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
+<div class="line"><a name="l00473"></a><span class="lineno"><a class="code" href="classnrf.html#a88b00a3dbae977c6edaf3943bb8d8728">  473</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a88b00a3dbae977c6edaf3943bb8d8728" title="Retorna o argoritmo de cálculo do CRC.">nrf::get_crc_mode</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    uint8_t reg;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, &amp;reg);</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordflow">if</span>(reg &amp; <a class="code" href="nordic_8h.html#aece57618cf42f6b1b520341ef19a66f8">EN_CRC</a>){</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <span class="keywordflow">if</span>(reg &amp; <a class="code" href="nordic_8h.html#a253dd73b17f0ea7f71e55f52e796836a">CRCO</a>){</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;            <span class="keywordflow">return</span> 0x02;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;            <span class="keywordflow">return</span> 0x01;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        }</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        <span class="keywordflow">return</span> 0x00;</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    }</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;}</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;</div>
+<div class="line"><a name="l00491"></a><span class="lineno"><a class="code" href="classnrf.html#a674251450acee6d20090741155f793fa">  491</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a674251450acee6d20090741155f793fa" title="Descarrega buffer de recepção.">nrf::flush_rx_fifo</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    uint8_t data = <a class="code" href="nordic_8h.html#ab2418a6171d7f1eefd458927fdfe7057">FLUSH_RX</a>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>, &amp;data, <span class="keyword">sizeof</span>(data));</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;}</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
+<div class="line"><a name="l00500"></a><span class="lineno"><a class="code" href="classnrf.html#a89449d9aadc1957b3f6631780822f8be">  500</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a89449d9aadc1957b3f6631780822f8be" title="Descarrega buffer de transmissão.">nrf::flush_tx_fifo</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    uint8_t data = <a class="code" href="nordic_8h.html#abce47e8066832b6ac4e18162a79859b4">FLUSH_TX</a>;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>, &amp;data, <span class="keyword">sizeof</span>(data));</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;}</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;</div>
+<div class="line"><a name="l00511"></a><span class="lineno"><a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7">  511</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7" title="Retorna o estado do dispositivo.">nrf::get_status</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    uint8_t reg=<a class="code" href="nordic_8h.html#a700f88377bf36711b711f69b06c52f5d">NOP</a>;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>, &amp;reg, <span class="keyword">sizeof</span>(reg));</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keywordflow">return</span> reg;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;}</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;</div>
+<div class="line"><a name="l00523"></a><span class="lineno"><a class="code" href="classnrf.html#a08d4decf99a5cc9f04697ec0b8cad1c3">  523</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a08d4decf99a5cc9f04697ec0b8cad1c3" title="Limpa todos os flags de interrupção.">nrf::clear_all_int_flags</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    uint8_t lastValue=<a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7" title="Retorna o estado do dispositivo.">nrf::get_status</a>();</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a59279bee44f34d08b3cbf3a89fb0d8d9">STATUS</a>, lastValue | (<a class="code" href="nordic_8h.html#a312d1f2745a86149b27cff7d61e715df">RX_DR</a>|<a class="code" href="nordic_8h.html#ab5f5243908a39ffd514fe701e9749bdc">TX_DS</a>|<a class="code" href="nordic_8h.html#ab4482ead4f3b452a032f63ac03ee1870">MAX_RT</a>) );</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;}</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
+<div class="line"><a name="l00540"></a><span class="lineno"><a class="code" href="classnrf.html#ad157c8856912fd56b6103fa8f940038b">  540</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classnrf.html#ad157c8856912fd56b6103fa8f940038b" title="Verifica se pacote foi recebido.">nrf::available</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    uint8_t fifo_status = <a class="code" href="classnrf.html#a0904f4978e6cbeb63c8a393f1ee9299f" title="Retorna o estado dos buffers de recepção e transmissão.">nrf::get_fifo_status</a>();</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordflow">if</span>(!(fifo_status &amp; <a class="code" href="nordic_8h.html#a8e43dfdec50b513f49b623e9da3def46">RX_EMPTY</a>)){</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    }</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;}</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;</div>
+<div class="line"><a name="l00563"></a><span class="lineno"><a class="code" href="classnrf.html#a05dbe730d7821617e94b7f94985bdf46">  563</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a05dbe730d7821617e94b7f94985bdf46" title="Retorna o valor do pipe em que houve recepção do último pacote.">nrf::get_data_source</a>(<span class="keywordtype">void</span>){                           </div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    uint8_t reg = <a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7" title="Retorna o estado do dispositivo.">nrf::get_status</a>();</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="keywordflow">return</span> (reg &amp; <a class="code" href="nordic_8h.html#aaafdcd7fe52991daff2385165e8547ab">RX_P_NO</a>) &gt;&gt; 1;</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;}</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
+<div class="line"><a name="l00579"></a><span class="lineno"><a class="code" href="classnrf.html#a103c4967d87d8c7834d29f48ecc6853e">  579</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classnrf.html#a103c4967d87d8c7834d29f48ecc6853e" title="Lê o payload do pacote recebido.">nrf::read_received_payload</a>(uint8_t *buff, uint8_t *length){</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    <span class="keywordflow">if</span>( !(<a class="code" href="classnrf.html#ad157c8856912fd56b6103fa8f940038b" title="Verifica se pacote foi recebido.">nrf::available</a>()) ){</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;        buff=NULL;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    }</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    </div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    *length = <a class="code" href="classnrf.html#a8314f44f01b6be582544289d90dce593" title="Retorna o tamanho do payload recebido.">nrf::get_received_payload_width</a>();</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    <span class="keywordflow">if</span>(*length&gt;32){</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        <a class="code" href="classnrf.html#a674251450acee6d20090741155f793fa" title="Descarrega buffer de recepção.">nrf::flush_rx_fifo</a>();</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        <a class="code" href="classnrf.html#a63682fdd6cc605b1cdc576002620c4cb" title="Limpa flag de interrupção.">nrf::clear_int_flag</a>(<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a384b31f70629e7a887970b8750e603e8">NRF_RX_DR</a>);</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        buff=NULL;</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    }</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    </div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    uint8_t incoming[*length+1];</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    incoming[0]= <a class="code" href="nordic_8h.html#a462d8c2314b823b724574c1ca73225a6">R_RX_PAYLOAD</a>;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>,incoming,<span class="keyword">sizeof</span>(incoming));</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    </div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;*length;i++)</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        buff[i]=incoming[i+1];</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    </div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;}</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;</div>
+<div class="line"><a name="l00609"></a><span class="lineno"><a class="code" href="classnrf.html#a755654e2dc2c5d095e35665404efeba9">  609</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a755654e2dc2c5d095e35665404efeba9" title="Bloqueia a execução do programa até a chegada de um pacote.">nrf::wait_available</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    <span class="keywordflow">while</span>( !(<a class="code" href="classnrf.html#ad157c8856912fd56b6103fa8f940038b" title="Verifica se pacote foi recebido.">nrf::available</a>()) ){</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    }</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;}</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;</div>
+<div class="line"><a name="l00624"></a><span class="lineno"><a class="code" href="classnrf.html#a75f743297a4f7fc770bad6b130a17f96">  624</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classnrf.html#a75f743297a4f7fc770bad6b130a17f96" title="Bloqueia a executação do programa até a chegada de um pacote ou timeout ocorrer.">nrf::wait_available_timeout</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> timeout){</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> currentTime = millis();</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    <span class="keywordflow">while</span>( (millis() - currentTime) &lt; timeout ){</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classnrf.html#ad157c8856912fd56b6103fa8f940038b" title="Verifica se pacote foi recebido.">nrf::available</a>()){</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        }</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    }</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;}</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;</div>
+<div class="line"><a name="l00641"></a><span class="lineno"><a class="code" href="classnrf.html#a6568bbc3dab2410df222e1247b4b87d5">  641</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a6568bbc3dab2410df222e1247b4b87d5" title="Configura o modo de potência do dispositivo.">nrf::set_power_up</a>(<span class="keywordtype">bool</span> pwr_up){</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    uint8_t lastValue;</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>,&amp;lastValue);</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    <span class="keywordflow">if</span>(pwr_up){</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, lastValue | <a class="code" href="nordic_8h.html#af0dbd9e4c17ba0db357fcb2cedd4aa6d">PWR_UP</a>);</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, lastValue &amp; ~<a class="code" href="nordic_8h.html#af0dbd9e4c17ba0db357fcb2cedd4aa6d">PWR_UP</a>);  </div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    }</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;}</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;</div>
+<div class="line"><a name="l00658"></a><span class="lineno"><a class="code" href="classnrf.html#a833792eb23819e3b9c7765ad41e38578">  658</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a833792eb23819e3b9c7765ad41e38578" title="Configura o modo primário do dispositivo.">nrf::set_primary_rx</a>(<span class="keywordtype">bool</span> prim_rx){</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    uint8_t lastValue;</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, &amp;lastValue);</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keywordflow">if</span>(prim_rx){</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, lastValue | <a class="code" href="nordic_8h.html#a0b4d92f3ecccb150d4cb1cb5d0f9d4e6">PRIM_RX</a>);</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, lastValue &amp; ~<a class="code" href="nordic_8h.html#a0b4d92f3ecccb150d4cb1cb5d0f9d4e6">PRIM_RX</a>);</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    }</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;}</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;</div>
+<div class="line"><a name="l00673"></a><span class="lineno"><a class="code" href="classnrf.html#a63682fdd6cc605b1cdc576002620c4cb">  673</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a63682fdd6cc605b1cdc576002620c4cb" title="Limpa flag de interrupção.">nrf::clear_int_flag</a>(<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891">nrf_int_source_t</a> int_source){</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    uint8_t lastValue = <a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7" title="Retorna o estado do dispositivo.">nrf::get_status</a>();</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keywordflow">switch</span>(int_source){</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a384b31f70629e7a887970b8750e603e8">NRF_RX_DR</a>:</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a59279bee44f34d08b3cbf3a89fb0d8d9">STATUS</a>, lastValue | <a class="code" href="nordic_8h.html#a312d1f2745a86149b27cff7d61e715df">RX_DR</a>);</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891ade79c0fb1841ecbb129802239980b4c2">NRF_TX_DS</a>:</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a59279bee44f34d08b3cbf3a89fb0d8d9">STATUS</a>, lastValue | <a class="code" href="nordic_8h.html#ab5f5243908a39ffd514fe701e9749bdc">TX_DS</a>);</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a993bd99eb0950eadd9efab50a6ad3826">NRF_MAX_RT</a>:</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a59279bee44f34d08b3cbf3a89fb0d8d9">STATUS</a>, lastValue | <a class="code" href="nordic_8h.html#ab4482ead4f3b452a032f63ac03ee1870">MAX_RT</a>);</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    }    </div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;}</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;</div>
+<div class="line"><a name="l00694"></a><span class="lineno"><a class="code" href="classnrf.html#a1a8415dfd997f23fafdff9372556ea74">  694</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a1a8415dfd997f23fafdff9372556ea74" title="Imprime no terminal serial o conteúdo dos registradores de configuração.">nrf::print_registers</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;  uint8_t reg,address_width;</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  Serial.print(<span class="stringliteral">&quot;--- Register&#39;s content (in hexa) ---\n&quot;</span>);</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>,&amp;reg);</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;  Serial.print(<span class="stringliteral">&quot;CONFIG: &quot;</span>);</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#aa84a282351a2c9b83dd653df6ac59216">EN_AA</a>,&amp;reg);  </div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;  Serial.print(<span class="stringliteral">&quot;EN_AA: &quot;</span>);</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ab6b2378ce9cab6ccafb6d30c774c5307">EN_RXADDR</a>,&amp;reg);  </div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;  Serial.print(<span class="stringliteral">&quot;EN_RXADDR: &quot;</span>);</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;  </div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#af5ef355ba3eca336db1285cab353ddc2">SETUP_AW</a>,&amp;reg); </div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;  address_width=reg+2;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;  Serial.print(<span class="stringliteral">&quot;SETUP_AW: &quot;</span>);</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;  </div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a2188309b3eceeae158dd64109cd919aa">SETUP_RETR</a>,&amp;reg);  </div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;  Serial.print(<span class="stringliteral">&quot;SETUP_RETR: &quot;</span>);</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;  Serial.println(reg,HEX);  </div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;  </div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a5c4da84e4a01531aa9f5c3e617848d66">RF_CH</a>,&amp;reg);  </div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;  Serial.print(<span class="stringliteral">&quot;RF_CH: &quot;</span>);</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;  Serial.println(reg,HEX); </div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;  </div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ad95edb7665f39454d7d7fd436301712b">RF_SETUP</a>,&amp;reg);  </div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;  Serial.print(<span class="stringliteral">&quot;RF_SETUP: &quot;</span>);</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;  </div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;  Serial.print(<span class="stringliteral">&quot;STATUS: &quot;</span>);</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;  Serial.println(<a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7" title="Retorna o estado do dispositivo.">nrf::get_status</a>(),HEX);</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a491468eaa7f2db84c152709b0b5fb1aa">OBSERVE_TX</a>,&amp;reg);  </div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;  Serial.print(<span class="stringliteral">&quot;OBSERVE_TX: &quot;</span>);</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;  </div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ab9743a9a0928c8f19ad9687ae6c67150">RPD</a>,&amp;reg);  </div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;  Serial.print(<span class="stringliteral">&quot;RPD: &quot;</span>);</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;  </div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;  uint8_t buff[5];</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;  <a class="code" href="classnrf.html#adc8177b853777e3fe0eb806ff57971f2" title="Lê um bloco de dados do registrador.">nrf::spi_read_multibyte_register</a>(<a class="code" href="nordic_8h.html#adc82a1b0dee303d8b783b9b9a89ae5aa">RX_ADDR_P0</a>, buff, address_width);</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_ADDR_P0 (LSB first): &quot;</span>);</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;address_width;i++){</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    Serial.print(buff[i],HEX);</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;  }</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;  Serial.print(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;  </div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;  </div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;  <a class="code" href="classnrf.html#adc8177b853777e3fe0eb806ff57971f2" title="Lê um bloco de dados do registrador.">nrf::spi_read_multibyte_register</a>(<a class="code" href="nordic_8h.html#ad4b44f18e4b27b07af84783d8f11726d">RX_ADDR_P1</a>, buff, address_width);</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_ADDR_P1 (LSB first): &quot;</span>);</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;address_width;i++){</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    Serial.print(buff[i],HEX);</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;  }</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;  Serial.print(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;  </div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ac10ad4b1d3ace06cc269098d1863f411">RX_ADDR_P2</a>,&amp;reg);  </div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_ADDR_P2: &quot;</span>);</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;  </div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a01228e7b997954bc9d715c8289731181">RX_ADDR_P3</a>,&amp;reg);  </div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_ADDR_P3: &quot;</span>);</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#afc579afe21136cd3f72b3ac805086726">RX_ADDR_P4</a>,&amp;reg);  </div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_ADDR_P4: &quot;</span>);</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;  </div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a49dfc07335896551e8c7797594658b07">RX_ADDR_P5</a>,&amp;reg);  </div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_ADDR_P5: &quot;</span>);</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;  </div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;  <a class="code" href="classnrf.html#adc8177b853777e3fe0eb806ff57971f2" title="Lê um bloco de dados do registrador.">nrf::spi_read_multibyte_register</a>(<a class="code" href="nordic_8h.html#aa734c6e08b9f794436eacbabe466a6c4">TX_ADDR</a>, buff, address_width);</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;  Serial.print(<span class="stringliteral">&quot;TX_ADDR (LSB first): &quot;</span>);</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;address_width;i++){</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    Serial.print(buff[i],HEX);</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;  }</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;  Serial.print(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a060e61d8f6e7ad28984540faa85cdecf">RX_PW_P0</a>,&amp;reg);  </div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_PW_P0: &quot;</span>);</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;  </div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#aa260ec97512905cec17f8ade82bc550d">RX_PW_P1</a>,&amp;reg);  </div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_PW_P1: &quot;</span>);</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;  </div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a38a4904a52517c8d339c689230a6567d">RX_PW_P2</a>,&amp;reg);  </div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_PW_P2: &quot;</span>);</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;  </div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a44bdf6946c1ae047ea2a2c981244d4d8">RX_PW_P3</a>,&amp;reg);  </div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_PW_P3: &quot;</span>);</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;  </div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a5cdda00ab52df1537b6b5d61ef88ba8f">RX_PW_P4</a>,&amp;reg);  </div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_PW_P4: &quot;</span>);</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;  </div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a9ce52902779e18d4fed3685b0f8be582">RX_PW_P5</a>,&amp;reg);  </div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;  Serial.print(<span class="stringliteral">&quot;RX_PW_P5: &quot;</span>);</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;  </div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a9e5c9878194f462bf7a46ca8a7b8f9d2">FIFO_STATUS</a>,&amp;reg);  </div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;  Serial.print(<span class="stringliteral">&quot;FIFO_STATUS: &quot;</span>);</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;  </div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ae79cde384e0b6a5549efb001589a79ec">DYNPD</a>,&amp;reg);  </div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;  Serial.print(<span class="stringliteral">&quot;DYNPD: &quot;</span>);</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;  </div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;  <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#adf81f7b30b6c08465ce704956b446a2d">FEATURE</a>,&amp;reg);  </div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;  Serial.print(<span class="stringliteral">&quot;FEATURE: &quot;</span>);</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;  Serial.println(reg,HEX);</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;  </div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;}</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;</div>
+<div class="line"><a name="l00825"></a><span class="lineno"><a class="code" href="classnrf.html#abfc4ce788178088e7a9596b730b34862">  825</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#abfc4ce788178088e7a9596b730b34862" title="Imprime no terminal serial o conteúdo de um registrador ou buffer de dados.">nrf::print_buffer</a>(uint8_t *buff, uint8_t length){</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;length;i++){</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;        Serial.print(buff[i],HEX);</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;        Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;    }</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;}</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;</div>
+<div class="line"><a name="l00838"></a><span class="lineno"><a class="code" href="classnrf.html#a0904f4978e6cbeb63c8a393f1ee9299f">  838</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a0904f4978e6cbeb63c8a393f1ee9299f" title="Retorna o estado dos buffers de recepção e transmissão.">nrf::get_fifo_status</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;    uint8_t reg;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a9e5c9878194f462bf7a46ca8a7b8f9d2">FIFO_STATUS</a>,&amp;reg);</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <span class="keywordflow">return</span> reg;</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;}</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;</div>
+<div class="line"><a name="l00856"></a><span class="lineno"><a class="code" href="classnrf.html#aab204842fe0a95b7962debcf8fbb7eb7">  856</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classnrf.html#aab204842fe0a95b7962debcf8fbb7eb7" title="Escreve o payload no buffer de transmissão.">nrf::write_tx_payload</a>(uint8_t *buff, uint8_t length, <span class="keywordtype">bool</span> auto_ack){</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;    </div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classnrf.html#a0904f4978e6cbeb63c8a393f1ee9299f" title="Retorna o estado dos buffers de recepção e transmissão.">nrf::get_fifo_status</a>() &amp; <a class="code" href="nordic_8h.html#a22d7127287df037834795bbf984d7796">TX_FIFO_FULL</a>){</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>; </div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;    }</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    </div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    uint8_t outcoming[length+1];</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    outcoming[0]=(auto_ack)? <a class="code" href="nordic_8h.html#afd12673bc8ca8559b0eee395e8845982">W_TX_PAYLOAD</a>:<a class="code" href="nordic_8h.html#a974e6df1de481bc7796a2c1c96b6c9ff">W_TX_PAYLOAD_NOACK</a>;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    </div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    <span class="comment">//copy data</span></div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;length;i++)</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        outcoming[i+1]=buff[i];</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    </div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    <span class="comment">// write into tx fifo</span></div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>, outcoming, <span class="keyword">sizeof</span>(outcoming));</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    </div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;}</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;</div>
+<div class="line"><a name="l00885"></a><span class="lineno"><a class="code" href="classnrf.html#a08862718e5c1c3f9e9c142230af3c661">  885</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classnrf.html#a08862718e5c1c3f9e9c142230af3c661" title="Aguarda o envio do pacote.">nrf::wait_packet_sent</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    uint8_t config;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, &amp;config);</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;    <span class="keywordflow">if</span>( (config &amp; <a class="code" href="nordic_8h.html#a0b4d92f3ecccb150d4cb1cb5d0f9d4e6">PRIM_RX</a>) | !digitalRead(<a class="code" href="classnrf.html#a65df277c87190fb9ec66f4855edf61d5">_ce</a>) | !(config &amp; <a class="code" href="nordic_8h.html#af0dbd9e4c17ba0db357fcb2cedd4aa6d">PWR_UP</a>) )  </div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    </div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    <span class="keywordflow">do</span>{</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        <span class="keywordflow">while</span>( !(<a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7" title="Retorna o estado do dispositivo.">nrf::get_status</a>() &amp; (<a class="code" href="nordic_8h.html#ab5f5243908a39ffd514fe701e9749bdc">TX_DS</a>|<a class="code" href="nordic_8h.html#ab4482ead4f3b452a032f63ac03ee1870">MAX_RT</a>)) ){</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        }</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    </div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7" title="Retorna o estado do dispositivo.">nrf::get_status</a>() &amp; <a class="code" href="nordic_8h.html#ab4482ead4f3b452a032f63ac03ee1870">MAX_RT</a>){</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;            <a class="code" href="classnrf.html#a63682fdd6cc605b1cdc576002620c4cb" title="Limpa flag de interrupção.">nrf::clear_int_flag</a>(<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a993bd99eb0950eadd9efab50a6ad3826">NRF_MAX_RT</a>);</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;            <a class="code" href="classnrf.html#a89449d9aadc1957b3f6631780822f8be" title="Descarrega buffer de transmissão.">nrf::flush_tx_fifo</a>();</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        }</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        <a class="code" href="classnrf.html#a63682fdd6cc605b1cdc576002620c4cb" title="Limpa flag de interrupção.">nrf::clear_int_flag</a>(<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891ade79c0fb1841ecbb129802239980b4c2">NRF_TX_DS</a>);</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;    }<span class="keywordflow">while</span>(!(<a class="code" href="classnrf.html#a0904f4978e6cbeb63c8a393f1ee9299f" title="Retorna o estado dos buffers de recepção e transmissão.">nrf::get_fifo_status</a>() &amp; <a class="code" href="nordic_8h.html#ae4034d6a21b6646c8710d09e43bd9383">TX_EMPTY</a>));</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    </div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;}</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;</div>
+<div class="line"><a name="l00912"></a><span class="lineno"><a class="code" href="classnrf.html#a8314f44f01b6be582544289d90dce593">  912</a></span>&#160;uint8_t <a class="code" href="classnrf.html#a8314f44f01b6be582544289d90dce593" title="Retorna o tamanho do payload recebido.">nrf::get_received_payload_width</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    uint8_t buff[2];</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    buff[0] = <a class="code" href="nordic_8h.html#a14ea186f093047db160cee642e5bd901">R_RX_PL_WID</a>;</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;    <a class="code" href="spidrv_8cpp.html#a26f7efb34a3460dcb633fa4ae661924b">spi_transfer</a>(<a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>, buff, <span class="keyword">sizeof</span>(buff));</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;    <span class="keywordflow">return</span> buff[1];</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;}</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;</div>
+<div class="line"><a name="l00926"></a><span class="lineno"><a class="code" href="classnrf.html#ac3589416cad9c84f46ce5a279fb91835">  926</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#ac3589416cad9c84f46ce5a279fb91835" title="Configura Interrupção externa (IRQ).">nrf::set_irq_pin</a>(uint8_t irq){</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    <a class="code" href="classnrf.html#ad81dc460edeb474b4149f3e26dbe2ede">_irq</a> = irq;</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    pinMode(<a class="code" href="classnrf.html#ad81dc460edeb474b4149f3e26dbe2ede">_irq</a>,INPUT);</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;}</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;</div>
+<div class="line"><a name="l00943"></a><span class="lineno"><a class="code" href="classnrf.html#a9f7f4020061591ecd91e07c0bbd30033">  943</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a9f7f4020061591ecd91e07c0bbd30033" title="Configura a fonte de interrupção.">nrf::set_int_source</a>(<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891">nrf_int_source_t</a> int_source, <span class="keywordtype">bool</span> enable){</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;    uint8_t config;</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>,&amp;config);</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;    <span class="keywordflow">switch</span>(int_source){</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        <span class="keywordflow">case</span> (<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a384b31f70629e7a887970b8750e603e8">NRF_RX_DR</a>):</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;        <span class="keywordflow">if</span>(enable){</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, config &amp; ~<a class="code" href="nordic_8h.html#a5f30d66a7a448dc83fd695dbd3efbe31">MASK_RX_DR</a>);</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, config | <a class="code" href="nordic_8h.html#a5f30d66a7a448dc83fd695dbd3efbe31">MASK_RX_DR</a>);</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;        }</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;        <span class="keywordflow">case</span> (<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891ade79c0fb1841ecbb129802239980b4c2">NRF_TX_DS</a>):</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;        <span class="keywordflow">if</span>(enable){</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, config &amp; ~<a class="code" href="nordic_8h.html#ad5f819a0030605463504bd2599579b4c">MASK_TX_DS</a>);</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, config | <a class="code" href="nordic_8h.html#ad5f819a0030605463504bd2599579b4c">MASK_TX_DS</a>);</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;        }</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;        <span class="keywordflow">case</span> (<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a993bd99eb0950eadd9efab50a6ad3826">NRF_MAX_RT</a>):</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;        <span class="keywordflow">if</span>(enable){</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, config &amp; ~<a class="code" href="nordic_8h.html#a13e9f541027a36c23211d6c8f3b33a92">MASK_MAX_RT</a>);</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#a76ea3cf49247a07c54b3db005a3c7f57">CONFIG</a>, config | <a class="code" href="nordic_8h.html#a13e9f541027a36c23211d6c8f3b33a92">MASK_MAX_RT</a>);</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;        }</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    }</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;}</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;</div>
+<div class="line"><a name="l00978"></a><span class="lineno"><a class="code" href="classnrf.html#a7747438ae4e4b1958f1fb6fc138abd92">  978</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a7747438ae4e4b1958f1fb6fc138abd92" title="Configura o payload dinâmico.">nrf::set_dynamic_payload</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, <span class="keywordtype">boolean</span> dyn_pl){</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;    uint8_t last_value;</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ae79cde384e0b6a5549efb001589a79ec">DYNPD</a>,&amp;last_value);</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <span class="keywordflow">switch</span>(pipe){</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4abaeb8791fe0342cade8db09107b1aed0">NRF_PIPE0</a>:</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a1fae01fbfff1b88562ba4aae2ac8c9cf">NRF_PIPE1</a>:</div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4af7db4e291ec2c6c15060cc5426b92eba">NRF_PIPE2</a>:</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a919be87ccfa5209894438c2cc1b9bcd9">NRF_PIPE3</a>:</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4ab7495b387ec5cb15aaab4a331a0c69c4">NRF_PIPE4</a>:</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a99787dedcb3526eb415f244952205339">NRF_PIPE5</a>:</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;        </div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;        <span class="keywordflow">if</span>(dyn_pl){</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#ae79cde384e0b6a5549efb001589a79ec">DYNPD</a>, last_value | <a class="code" href="nordic_8h.html#a83ee7fd3f13e5f09c1285246a3ea2a38">BIT</a>((uint8_t)pipe) );</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;            <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#ae79cde384e0b6a5549efb001589a79ec">DYNPD</a>, last_value &amp; ~<a class="code" href="nordic_8h.html#a83ee7fd3f13e5f09c1285246a3ea2a38">BIT</a>((uint8_t)pipe) );</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;        }</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;    }</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    </div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#ae79cde384e0b6a5549efb001589a79ec">DYNPD</a>,&amp;last_value);</div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;    uint8_t feature;</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;    <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">nrf::spi_read_register</a>(<a class="code" href="nordic_8h.html#adf81f7b30b6c08465ce704956b446a2d">FEATURE</a>, &amp;feature);</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;    <span class="keywordflow">if</span>(last_value){</div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#adf81f7b30b6c08465ce704956b446a2d">FEATURE</a>, feature|<a class="code" href="nordic_8h.html#a1b46f8336bda068b0759f70cceec3b65">EN_DPL</a>);</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;        <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">nrf::spi_write_register</a>(<a class="code" href="nordic_8h.html#adf81f7b30b6c08465ce704956b446a2d">FEATURE</a>, feature &amp; ~<a class="code" href="nordic_8h.html#a1b46f8336bda068b0759f70cceec3b65">EN_DPL</a>);</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;    }</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;}</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;</div>
+<div class="line"><a name="l01020"></a><span class="lineno"><a class="code" href="classnrf.html#a06b19f760bcb97e16ae843401db93b10"> 1020</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a06b19f760bcb97e16ae843401db93b10" title="Configura o modo de operação do dispositivo.">nrf::set_mode</a>(<a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">nrf_operation_mode_t</a> mode){</div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;    <a class="code" href="classnrf.html#a507bd00d0183aaca131e672fdeabf073">_last_mode</a> = <a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a>;</div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;     </div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;    <span class="keywordflow">switch</span>(mode){</div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;    </div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa5faf80fb9a04b5744294ce86cfff7a9d">NRF_POWER_DOWN</a>:</div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;    <a class="code" href="classnrf.html#a0093820dc7978c8cb33ea250e8847705" title="Desabilita o dispositivo.">nrf::chip_disable</a>();</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;    <a class="code" href="classnrf.html#a6568bbc3dab2410df222e1247b4b87d5" title="Configura o modo de potência do dispositivo.">nrf::set_power_up</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;    <a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> = <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa5faf80fb9a04b5744294ce86cfff7a9d">NRF_POWER_DOWN</a>;</div>
+<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;    </div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faf2fd855adec4f6554dad638a448b7428">NRF_STANDBY</a>:</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;    <a class="code" href="classnrf.html#a0093820dc7978c8cb33ea250e8847705" title="Desabilita o dispositivo.">nrf::chip_disable</a>();</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;    <a class="code" href="classnrf.html#a6568bbc3dab2410df222e1247b4b87d5" title="Configura o modo de potência do dispositivo.">nrf::set_power_up</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> == <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa5faf80fb9a04b5744294ce86cfff7a9d">NRF_POWER_DOWN</a>)</div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;        delay(5);</div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;    <a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> = <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faf2fd855adec4f6554dad638a448b7428">NRF_STANDBY</a>;</div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;    </div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa6ba0978740f5af9e322dc373f461eba2">NRF_RX_MODE</a>:</div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;    <a class="code" href="classnrf.html#a0093820dc7978c8cb33ea250e8847705" title="Desabilita o dispositivo.">nrf::chip_disable</a>();</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    <a class="code" href="classnrf.html#a6568bbc3dab2410df222e1247b4b87d5" title="Configura o modo de potência do dispositivo.">nrf::set_power_up</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    <a class="code" href="classnrf.html#a833792eb23819e3b9c7765ad41e38578" title="Configura o modo primário do dispositivo.">nrf::set_primary_rx</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;    <a class="code" href="classnrf.html#a27c13335cdcd46659337e232f97f663c" title="Habilita o dispositivo.">nrf::chip_enable</a>();</div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> == <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faf2fd855adec4f6554dad638a448b7428">NRF_STANDBY</a>)</div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;        delayMicroseconds(150);</div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> == <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa5faf80fb9a04b5744294ce86cfff7a9d">NRF_POWER_DOWN</a>)</div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;        delay(5);</div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;    <a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> = <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa6ba0978740f5af9e322dc373f461eba2">NRF_RX_MODE</a>;</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;    </div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faccfe80dc5a511c6fb03f97160465145c">NRF_TX_MODE</a>:</div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;    <a class="code" href="classnrf.html#a0093820dc7978c8cb33ea250e8847705" title="Desabilita o dispositivo.">nrf::chip_disable</a>();</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;    <a class="code" href="classnrf.html#a6568bbc3dab2410df222e1247b4b87d5" title="Configura o modo de potência do dispositivo.">nrf::set_power_up</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;    <a class="code" href="classnrf.html#a833792eb23819e3b9c7765ad41e38578" title="Configura o modo primário do dispositivo.">nrf::set_primary_rx</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;    <a class="code" href="classnrf.html#a27c13335cdcd46659337e232f97f663c" title="Habilita o dispositivo.">nrf::chip_enable</a>();</div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> == <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faf2fd855adec4f6554dad638a448b7428">NRF_STANDBY</a>)</div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;        delayMicroseconds(150);</div>
+<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> == <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa5faf80fb9a04b5744294ce86cfff7a9d">NRF_POWER_DOWN</a>)</div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;        delay(5);</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;    <a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a> = <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faccfe80dc5a511c6fb03f97160465145c">NRF_TX_MODE</a>;</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;    </div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;    }</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;}</div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;</div>
+<div class="line"><a name="l01069"></a><span class="lineno"><a class="code" href="classnrf.html#a79f6b000ebbba48ea5b9f7d6af5d0738"> 1069</a></span>&#160;<a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">nrf_operation_mode_t</a> <a class="code" href="classnrf.html#a79f6b000ebbba48ea5b9f7d6af5d0738" title="Retorna o modo de operação corrente.">nrf::get_current_mode</a>(){</div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a>;</div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;}</div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;</div>
+<div class="line"><a name="l01077"></a><span class="lineno"><a class="code" href="classnrf.html#a87fe38db9329782914ef1ab204223079"> 1077</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnrf.html#a87fe38db9329782914ef1ab204223079" title="Coloca o dispositivo no modo de operação anterior.">nrf::retrieve_last_mode</a>(){</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    <a class="code" href="classnrf.html#a06b19f760bcb97e16ae843401db93b10" title="Configura o modo de operação do dispositivo.">nrf::set_mode</a>(<a class="code" href="classnrf.html#a507bd00d0183aaca131e672fdeabf073">_last_mode</a>);</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 27 de Dezembro de 2013 14:59:08 para nrf por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>
