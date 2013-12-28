@@ -2,43 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>nrf: Código-Fonte de nrf.h</title>
+<title>nrf: nrf.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
-</script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
-   <div id="projectname">nrf
-   </div>
-  </td>
- </tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- Gerado por Doxygen 1.8.1.2 -->
-<script type="text/javascript">
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
 var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
-</script>
-  <div id="navrow1" class="tabs">
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
     <ul class="tablist">
-      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
-      <li>
+      <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -56,164 +37,161 @@ var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
       </li>
     </ul>
   </div>
-  <div id="navrow2" class="tabs2">
+  <div class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>Lista&#160;de&#160;ficheiros</span></a></li>
-      <li><a href="globals.html"><span>Ficheiros&#160;membro</span></a></li>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
-<!-- window showing the filter options -->
+<div class="header">
+  <div class="headertitle">
+<h1>nrf.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="nrf_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00094"></a>00094 <span class="preprocessor">#ifndef NRF_H</span>
+<a name="l00095"></a>00095 <span class="preprocessor"></span><span class="preprocessor">#define NRF_H</span>
+<a name="l00096"></a>00096 <span class="preprocessor"></span>
+<a name="l00097"></a>00097 <span class="preprocessor">#include&lt;Arduino.h&gt;</span>
+<a name="l00098"></a>00098 <span class="preprocessor">#include&lt;stdint.h&gt;</span>
+<a name="l00099"></a>00099 <span class="preprocessor">#include&lt;SPI.h&gt;</span>
+<a name="l00100"></a>00100 <span class="preprocessor">#include &quot;<a class="code" href="spidrv_8h.html" title="arquivo de definições do driver SPI">spidrv.h</a>&quot;</span>
+<a name="l00101"></a>00101 <span class="preprocessor">#include &quot;<a class="code" href="nordic_8h.html" title="Arquivo de definição do chip nRF24L01+.">nordic.h</a>&quot;</span>
+<a name="l00102"></a>00102 
+<a name="l00103"></a><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580a">00103</a> <span class="keyword">typedef</span> <span class="keyword">enum</span>{
+<a name="l00104"></a><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aa691956c9cfb984896b9afd9d48a69b2b">00104</a>     <a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aa691956c9cfb984896b9afd9d48a69b2b">NRF_18DBM</a> = 0,
+<a name="l00105"></a><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aa70982963ab53e4a37297d0541af0b884">00105</a>     NRF_12DBM,
+<a name="l00106"></a><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aac24df0232d4723f609a8bbc370c5444a">00106</a>     NRF_6DBM,
+<a name="l00107"></a><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aad2788bc0e9b660276095c78784ac6581">00107</a>     <a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aad2788bc0e9b660276095c78784ac6581">NRF_0DBM</a>
+<a name="l00108"></a>00108 }nrf_power_t;
+<a name="l00109"></a>00109 
+<a name="l00110"></a><a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290">00110</a> <span class="keyword">typedef</span> <span class="keyword">enum</span>{
+<a name="l00111"></a><a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290adf64314d3a006c1be7fe60845621bc2e">00111</a>     NRF_250KBPS,
+<a name="l00112"></a><a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290a31712bdb0199355f6cfe32e5467e43da">00112</a>     NRF_1MBPS,
+<a name="l00113"></a><a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290a5492e0f45be9142ddfd733cef426bd20">00113</a>     <a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290a5492e0f45be9142ddfd733cef426bd20">NRF_2MBPS</a>
+<a name="l00114"></a>00114 }nrf_datarate_t;
+<a name="l00115"></a>00115 
+<a name="l00116"></a><a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5e">00116</a> <span class="keyword">typedef</span> <span class="keyword">enum</span>{
+<a name="l00117"></a><a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5ead9febb3f3ead3d11ae1b78ef7852b277">00117</a>     <a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5ead9febb3f3ead3d11ae1b78ef7852b277">NRF_AW_3BYTES</a> = 1,
+<a name="l00118"></a><a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5ead29fc318211d4915754c838f0d1bdf6d">00118</a>     NRF_AW_4BYTES,
+<a name="l00119"></a><a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5eab0d9c36652ec25d1743cce8d509c228b">00119</a>     <a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5eab0d9c36652ec25d1743cce8d509c228b">NRF_AW_5BYTES</a>
+<a name="l00120"></a>00120 }nrf_address_width_t;
+<a name="l00121"></a>00121 
+<a name="l00122"></a><a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2">00122</a> <span class="keyword">typedef</span> <span class="keyword">enum</span>{
+<a name="l00123"></a><a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2a78c60fab5bf7a6db66a73b479188aa78">00123</a>     NRF_CRC_1BYTE,
+<a name="l00124"></a><a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2a7e2d319c6823ee1064d257c2129e5f31">00124</a>     <a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2a7e2d319c6823ee1064d257c2129e5f31">NRF_CRC_2BYTES</a>
+<a name="l00125"></a>00125 }nrf_crc_mode_t;
+<a name="l00126"></a>00126 
+<a name="l00127"></a><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">00127</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> {
+<a name="l00128"></a><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4abaeb8791fe0342cade8db09107b1aed0">00128</a>     <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4abaeb8791fe0342cade8db09107b1aed0">NRF_PIPE0</a>=0,
+<a name="l00129"></a><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a1fae01fbfff1b88562ba4aae2ac8c9cf">00129</a>     NRF_PIPE1,
+<a name="l00130"></a><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4af7db4e291ec2c6c15060cc5426b92eba">00130</a>     NRF_PIPE2,
+<a name="l00131"></a><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a919be87ccfa5209894438c2cc1b9bcd9">00131</a>     NRF_PIPE3,
+<a name="l00132"></a><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4ab7495b387ec5cb15aaab4a331a0c69c4">00132</a>     NRF_PIPE4,
+<a name="l00133"></a><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a99787dedcb3526eb415f244952205339">00133</a>     NRF_PIPE5,
+<a name="l00134"></a>00134 }nrf_address_t;
+<a name="l00135"></a>00135 
+<a name="l00136"></a><a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891">00136</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> {
+<a name="l00137"></a><a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a993bd99eb0950eadd9efab50a6ad3826">00137</a>     NRF_MAX_RT,     
+<a name="l00138"></a><a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891ade79c0fb1841ecbb129802239980b4c2">00138</a>     NRF_TX_DS,
+<a name="l00139"></a><a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a384b31f70629e7a887970b8750e603e8">00139</a>     <a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a384b31f70629e7a887970b8750e603e8">NRF_RX_DR</a>
+<a name="l00140"></a>00140 }nrf_int_source_t;
+<a name="l00141"></a>00141 
+<a name="l00142"></a><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">00142</a> <span class="keyword">typedef</span> <span class="keyword">enum</span>{
+<a name="l00143"></a><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa5faf80fb9a04b5744294ce86cfff7a9d">00143</a>         NRF_POWER_DOWN,
+<a name="l00144"></a><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faf2fd855adec4f6554dad638a448b7428">00144</a>         NRF_STANDBY,
+<a name="l00145"></a><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faccfe80dc5a511c6fb03f97160465145c">00145</a>         NRF_TX_MODE,
+<a name="l00146"></a><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa6ba0978740f5af9e322dc373f461eba2">00146</a>         <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa6ba0978740f5af9e322dc373f461eba2">NRF_RX_MODE</a>
+<a name="l00147"></a>00147 }nrf_operation_mode_t;
+<a name="l00148"></a>00148 
+<a name="l00156"></a><a class="code" href="classnrf.html">00156</a> <span class="keyword">class </span><a class="code" href="classnrf.html" title="Classe nrf.">nrf</a>{
+<a name="l00157"></a>00157     
+<a name="l00158"></a>00158 <span class="keyword">public</span>:
+<a name="l00159"></a>00159     <a class="code" href="classnrf.html#a2c8892435262e4e586346ab1642cfb23" title="Construtor da classe.">nrf</a>(uint8_t ce=9, uint8_t csn=10);
+<a name="l00160"></a>00160     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#ae6a283eddcb49ab5203fa23d85a39f5c" title="Configura o canal de RF.">set_rf_channel</a>(uint8_t rf_channel);
+<a name="l00161"></a>00161     uint8_t <a class="code" href="classnrf.html#a1c99461d7ea34e2369d32b98b6e29e1e" title="Retorna o canal de RF.">get_rf_channel</a>(<span class="keywordtype">void</span>);
+<a name="l00162"></a>00162     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#aa3d1221c69625052f8c4404c2be6d471" title="Configura a potência do sinal de RF.">set_rf_power</a>(<a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580a">nrf_power_t</a> power);
+<a name="l00163"></a>00163     uint8_t <a class="code" href="classnrf.html#a21b2fe0aa960eee7a7d4d35af23b4498" title="Retorna a potência atual do sinal de RF.">get_rf_power</a>(<span class="keywordtype">void</span>);
+<a name="l00164"></a>00164     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a134b5083e12fd69e59ddd7c4ec1f86fb" title="Configura a taxa de dados (bps).">set_rf_datarate</a>(<a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290">nrf_datarate_t</a> speed);
+<a name="l00165"></a>00165     uint8_t <a class="code" href="classnrf.html#a8477ed309783ba5867c0988af4c80ae0" title="Retorna a taxa de dados (bps) atual.">get_rf_datarate</a>(<span class="keywordtype">void</span>);
+<a name="l00166"></a>00166     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#aeacf3917c80b37ede2d9d3cc51b6bf1e" title="Configura o tamanho do endereço do dispositivo.">set_address_width</a>(<a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5e">nrf_address_width_t</a> width);
+<a name="l00167"></a>00167     uint8_t <a class="code" href="classnrf.html#ad9fd4f4886fcd9adc2b9fb5c843b3969" title="Retorna o tamanho do endereço atual.">get_address_width</a>(<span class="keywordtype">void</span>);
+<a name="l00168"></a>00168     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#adef0ba1bf3e125d353e930708b94d51d" title="Habilita pipe.">enable_rx_pipe</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, <span class="keywordtype">bool</span> auto_ack);
+<a name="l00169"></a>00169     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a75eeb6beac7627bac9341637ef7c4ef1" title="Desabilita pipe.">disable_rx_pipe</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe);
+<a name="l00170"></a>00170     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#aceb25880996640f22d4e71ac254e0eae" title="Configura endereços de recepção.">set_rx_address</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, uint8_t *addr, uint8_t length);
+<a name="l00171"></a>00171     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a95d9ebd55679064effbdd2d83305ac98" title="Configura o tamanho do payload para recepção.">set_static_payload_width</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, uint8_t width);
+<a name="l00172"></a>00172     uint8_t <a class="code" href="classnrf.html#a27ec9c936d039ea105d37d02ecd3f38e" title="Retorna o tamanho do payload.">get_static_payload_width</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe);
+<a name="l00173"></a>00173     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#af038fc525d5702ff533cd5bd014ab5ee" title="Configura o endereço de transmissão.">set_tx_address</a>(uint8_t *addr, uint8_t length);
+<a name="l00174"></a>00174     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a134acc1d52019ede259b915869c0bf5b" title="Configura os parâmetros de retransmissão.">set_retr_param</a>(uint8_t retr_count, uint8_t retr_delay);
+<a name="l00175"></a>00175     uint8_t <a class="code" href="classnrf.html#a6514e7743c8d8845132a16aa2de164a1" title="Retorna os parâmetros de retransmissão.">get_retr_param</a>(<span class="keywordtype">void</span>);
+<a name="l00176"></a>00176     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a36b6dcf9a7457520622369ec7d0efc26" title="Seleciona o argoritmo de cálculo do CRC.">set_crc_mode</a>(<a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2">nrf_crc_mode_t</a> crc_mode);
+<a name="l00177"></a>00177     uint8_t <a class="code" href="classnrf.html#a88b00a3dbae977c6edaf3943bb8d8728" title="Retorna o argoritmo de cálculo do CRC.">get_crc_mode</a>(<span class="keywordtype">void</span>);
+<a name="l00178"></a>00178     <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#ad157c8856912fd56b6103fa8f940038b" title="Verifica se pacote foi recebido.">available</a>(<span class="keywordtype">void</span>);
+<a name="l00179"></a>00179     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a755654e2dc2c5d095e35665404efeba9" title="Bloqueia a execução do programa até a chegada de um pacote.">wait_available</a>(<span class="keywordtype">void</span>);
+<a name="l00180"></a>00180     <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#a75f743297a4f7fc770bad6b130a17f96" title="Bloqueia a executação do programa até a chegada de um pacote ou timeout ocorrer.">wait_available_timeout</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> timeout);
+<a name="l00181"></a>00181     <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#aab204842fe0a95b7962debcf8fbb7eb7" title="Escreve o payload no buffer de transmissão.">write_tx_payload</a>(uint8_t *buff, uint8_t length, <span class="keywordtype">bool</span> auto_ack=<span class="keyword">true</span>);
+<a name="l00182"></a>00182     <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#a103c4967d87d8c7834d29f48ecc6853e" title="Lê o payload do pacote recebido.">read_received_payload</a>(uint8_t *buff, uint8_t *length);
+<a name="l00183"></a>00183     <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#a08862718e5c1c3f9e9c142230af3c661" title="Aguarda o envio do pacote.">wait_packet_sent</a>(<span class="keywordtype">void</span>);
+<a name="l00184"></a>00184     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#ac3589416cad9c84f46ce5a279fb91835" title="Configura Interrupção externa (IRQ).">set_irq_pin</a>(uint8_t irq = 2);
+<a name="l00185"></a>00185     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a9f7f4020061591ecd91e07c0bbd30033" title="Configura a fonte de interrupção.">set_int_source</a>(<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891">nrf_int_source_t</a> int_source, <span class="keywordtype">bool</span> enable);
+<a name="l00186"></a>00186     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a7747438ae4e4b1958f1fb6fc138abd92" title="Configura o payload dinâmico.">set_dynamic_payload</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, <span class="keywordtype">boolean</span> dyn_pl);
+<a name="l00187"></a>00187     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a08d4decf99a5cc9f04697ec0b8cad1c3" title="Limpa todos os flags de interrupção.">clear_all_int_flags</a>(<span class="keywordtype">void</span>);
+<a name="l00188"></a>00188     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a63682fdd6cc605b1cdc576002620c4cb" title="Limpa flag de interrupção.">clear_int_flag</a>(<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891">nrf_int_source_t</a> int_source);
+<a name="l00189"></a>00189     uint8_t <a class="code" href="classnrf.html#a8314f44f01b6be582544289d90dce593" title="Retorna o tamanho do payload recebido.">get_received_payload_width</a>(<span class="keywordtype">void</span>);
+<a name="l00190"></a>00190     uint8_t <a class="code" href="classnrf.html#a05dbe730d7821617e94b7f94985bdf46" title="Retorna o valor do pipe em que houve recepção do último pacote.">get_data_source</a>(<span class="keywordtype">void</span>);
+<a name="l00191"></a>00191     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a06b19f760bcb97e16ae843401db93b10" title="Configura o modo de operação do dispositivo.">set_mode</a>(<a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">nrf_operation_mode_t</a> mode); 
+<a name="l00192"></a>00192     <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">nrf_operation_mode_t</a> <a class="code" href="classnrf.html#a79f6b000ebbba48ea5b9f7d6af5d0738" title="Retorna o modo de operação corrente.">get_current_mode</a>();
+<a name="l00193"></a>00193     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a87fe38db9329782914ef1ab204223079" title="Coloca o dispositivo no modo de operação anterior.">retrieve_last_mode</a>();
+<a name="l00194"></a>00194     
+<a name="l00195"></a>00195     <span class="comment">//debug</span>
+<a name="l00196"></a>00196     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a1a8415dfd997f23fafdff9372556ea74" title="Imprime no terminal serial o conteúdo dos registradores de configuração.">print_registers</a>(<span class="keywordtype">void</span>);
+<a name="l00197"></a>00197     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#abfc4ce788178088e7a9596b730b34862" title="Imprime no terminal serial o conteúdo de um registrador ou buffer de dados.">print_buffer</a>(uint8_t *buff, uint8_t length);
+<a name="l00198"></a>00198     
+<a name="l00199"></a>00199     
+<a name="l00200"></a>00200     
+<a name="l00201"></a>00201     <span class="comment">/* criar funcoes */</span>
+<a name="l00202"></a>00202     <span class="comment">//send_single_packet(destino,buffer,len,ack);</span>
+<a name="l00203"></a>00203     
+<a name="l00204"></a>00204     
+<a name="l00205"></a>00205 <span class="keyword">private</span>:
+<a name="l00206"></a><a class="code" href="classnrf.html#a65df277c87190fb9ec66f4855edf61d5">00206</a>     uint8_t <a class="code" href="classnrf.html#a65df277c87190fb9ec66f4855edf61d5">_ce</a>; <span class="comment">//pino de CE</span>
+<a name="l00207"></a><a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">00207</a>     uint8_t <a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>; <span class="comment">//pino de CSN</span>
+<a name="l00208"></a><a class="code" href="classnrf.html#ad81dc460edeb474b4149f3e26dbe2ede">00208</a>     uint8_t <a class="code" href="classnrf.html#ad81dc460edeb474b4149f3e26dbe2ede">_irq</a>; <span class="comment">//pino de IRQ</span>
+<a name="l00209"></a><a class="code" href="classnrf.html#a507bd00d0183aaca131e672fdeabf073">00209</a>     <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">nrf_operation_mode_t</a> <a class="code" href="classnrf.html#a507bd00d0183aaca131e672fdeabf073">_last_mode</a>,<a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a>;
+<a name="l00210"></a>00210     uint8_t <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">spi_write_register</a>(uint8_t register_addr, uint8_t data);
+<a name="l00211"></a>00211     uint8_t <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">spi_read_register</a>(uint8_t register_addr, uint8_t *data);
+<a name="l00212"></a>00212     uint8_t <a class="code" href="classnrf.html#abbed07bbeb60fb2090f2ffba58fab16b" title="Escreve um bloco de dados no registrador.">spi_write_multibyte_register</a>(uint8_t register_addr, uint8_t *addr, uint8_t length);
+<a name="l00213"></a>00213     uint8_t <a class="code" href="classnrf.html#adc8177b853777e3fe0eb806ff57971f2" title="Lê um bloco de dados do registrador.">spi_read_multibyte_register</a>(uint8_t register_addr, uint8_t *buff, uint8_t length);
+<a name="l00214"></a>00214     uint8_t <a class="code" href="classnrf.html#a0904f4978e6cbeb63c8a393f1ee9299f" title="Retorna o estado dos buffers de recepção e transmissão.">get_fifo_status</a>(<span class="keywordtype">void</span>);
+<a name="l00215"></a>00215     uint8_t <a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7" title="Retorna o estado do dispositivo.">get_status</a>(<span class="keywordtype">void</span>);
+<a name="l00216"></a>00216     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a6568bbc3dab2410df222e1247b4b87d5" title="Configura o modo de potência do dispositivo.">set_power_up</a>(<span class="keywordtype">bool</span> pwr_up);
+<a name="l00217"></a>00217     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a833792eb23819e3b9c7765ad41e38578" title="Configura o modo primário do dispositivo.">set_primary_rx</a>(<span class="keywordtype">bool</span> prim_rx);
+<a name="l00218"></a>00218     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a674251450acee6d20090741155f793fa" title="Descarrega buffer de recepção.">flush_rx_fifo</a>(<span class="keywordtype">void</span>);
+<a name="l00219"></a>00219     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a89449d9aadc1957b3f6631780822f8be" title="Descarrega buffer de transmissão.">flush_tx_fifo</a>(<span class="keywordtype">void</span>);
+<a name="l00220"></a>00220     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a27c13335cdcd46659337e232f97f663c" title="Habilita o dispositivo.">chip_enable</a>(<span class="keywordtype">void</span>);
+<a name="l00221"></a>00221     <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a0093820dc7978c8cb33ea250e8847705" title="Desabilita o dispositivo.">chip_disable</a>(<span class="keywordtype">void</span>);
+<a name="l00222"></a>00222     
+<a name="l00223"></a>00223 };
+<a name="l00224"></a>00224 
+<a name="l00225"></a>00225 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valores da enumeração</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Valores da enumeração</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
+<iframe src="" frameborder="0" 
         name="MSearchResults" id="MSearchResults">
 </iframe>
 </div>
 
-<div class="header">
-  <div class="headertitle">
-<div class="title">nrf.h</div>  </div>
-</div><!--header-->
-<div class="contents">
-<a href="nrf_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#ifndef NRF_H</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NRF_H</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#include&lt;Arduino.h&gt;</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#include&lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#include&lt;SPI.h&gt;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="spidrv_8h.html" title="arquivo de definições do driver SPI">spidrv.h</a>&quot;</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="nordic_8h.html" title="Arquivo de definição do chip nRF24L01+.">nordic.h</a>&quot;</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580a">   94</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aa691956c9cfb984896b9afd9d48a69b2b">   95</a></span>&#160;    <a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aa691956c9cfb984896b9afd9d48a69b2b">NRF_18DBM</a> = 0,</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aa70982963ab53e4a37297d0541af0b884">   96</a></span>&#160;    <a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aa70982963ab53e4a37297d0541af0b884">NRF_12DBM</a>,</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aac24df0232d4723f609a8bbc370c5444a">   97</a></span>&#160;    <a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aac24df0232d4723f609a8bbc370c5444a">NRF_6DBM</a>,</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aad2788bc0e9b660276095c78784ac6581">   98</a></span>&#160;    <a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580aad2788bc0e9b660276095c78784ac6581">NRF_0DBM</a></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}<a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580a">nrf_power_t</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290">  101</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290adf64314d3a006c1be7fe60845621bc2e">  102</a></span>&#160;    <a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290adf64314d3a006c1be7fe60845621bc2e">NRF_250KBPS</a>,</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290a31712bdb0199355f6cfe32e5467e43da">  103</a></span>&#160;    <a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290a31712bdb0199355f6cfe32e5467e43da">NRF_1MBPS</a>,</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290a5492e0f45be9142ddfd733cef426bd20">  104</a></span>&#160;    <a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290a5492e0f45be9142ddfd733cef426bd20">NRF_2MBPS</a></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}<a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290">nrf_datarate_t</a>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5e">  107</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5ead9febb3f3ead3d11ae1b78ef7852b277">  108</a></span>&#160;    <a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5ead9febb3f3ead3d11ae1b78ef7852b277">NRF_AW_3BYTES</a> = 1,</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5ead29fc318211d4915754c838f0d1bdf6d">  109</a></span>&#160;    <a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5ead29fc318211d4915754c838f0d1bdf6d">NRF_AW_4BYTES</a>,</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5eab0d9c36652ec25d1743cce8d509c228b">  110</a></span>&#160;    <a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5eab0d9c36652ec25d1743cce8d509c228b">NRF_AW_5BYTES</a></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}<a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5e">nrf_address_width_t</a>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2">  113</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2a78c60fab5bf7a6db66a73b479188aa78">  114</a></span>&#160;    <a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2a78c60fab5bf7a6db66a73b479188aa78">NRF_CRC_1BYTE</a>,</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2a7e2d319c6823ee1064d257c2129e5f31">  115</a></span>&#160;    <a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2a7e2d319c6823ee1064d257c2129e5f31">NRF_CRC_2BYTES</a></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}<a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2">nrf_crc_mode_t</a>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">  118</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4abaeb8791fe0342cade8db09107b1aed0">  119</a></span>&#160;    <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4abaeb8791fe0342cade8db09107b1aed0">NRF_PIPE0</a>=0,</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a1fae01fbfff1b88562ba4aae2ac8c9cf">  120</a></span>&#160;    <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a1fae01fbfff1b88562ba4aae2ac8c9cf">NRF_PIPE1</a>,</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4af7db4e291ec2c6c15060cc5426b92eba">  121</a></span>&#160;    <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4af7db4e291ec2c6c15060cc5426b92eba">NRF_PIPE2</a>,</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a919be87ccfa5209894438c2cc1b9bcd9">  122</a></span>&#160;    <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a919be87ccfa5209894438c2cc1b9bcd9">NRF_PIPE3</a>,</div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4ab7495b387ec5cb15aaab4a331a0c69c4">  123</a></span>&#160;    <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4ab7495b387ec5cb15aaab4a331a0c69c4">NRF_PIPE4</a>,</div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a99787dedcb3526eb415f244952205339">  124</a></span>&#160;    <a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4a99787dedcb3526eb415f244952205339">NRF_PIPE5</a>,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891">  127</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a993bd99eb0950eadd9efab50a6ad3826">  128</a></span>&#160;    <a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a993bd99eb0950eadd9efab50a6ad3826">NRF_MAX_RT</a>,     </div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891ade79c0fb1841ecbb129802239980b4c2">  129</a></span>&#160;    <a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891ade79c0fb1841ecbb129802239980b4c2">NRF_TX_DS</a>,</div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a384b31f70629e7a887970b8750e603e8">  130</a></span>&#160;    <a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891a384b31f70629e7a887970b8750e603e8">NRF_RX_DR</a></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891">nrf_int_source_t</a>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">  133</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa5faf80fb9a04b5744294ce86cfff7a9d">  134</a></span>&#160;        <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa5faf80fb9a04b5744294ce86cfff7a9d">NRF_POWER_DOWN</a>,</div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faf2fd855adec4f6554dad638a448b7428">  135</a></span>&#160;        <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faf2fd855adec4f6554dad638a448b7428">NRF_STANDBY</a>,</div>
-<div class="line"><a name="l00136"></a><span class="lineno"><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faccfe80dc5a511c6fb03f97160465145c">  136</a></span>&#160;        <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13faccfe80dc5a511c6fb03f97160465145c">NRF_TX_MODE</a>,</div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa6ba0978740f5af9e322dc373f461eba2">  137</a></span>&#160;        <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13fa6ba0978740f5af9e322dc373f461eba2">NRF_RX_MODE</a></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}<a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">nrf_operation_mode_t</a>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="code" href="classnrf.html">  147</a></span>&#160;<span class="keyword">class </span><a class="code" href="classnrf.html" title="Classe nrf.">nrf</a>{</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="classnrf.html#a2c8892435262e4e586346ab1642cfb23" title="Construtor da classe.">nrf</a>(uint8_t ce=9, uint8_t csn=10);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#ae6a283eddcb49ab5203fa23d85a39f5c" title="Configura o canal de RF.">set_rf_channel</a>(uint8_t rf_channel);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    uint8_t <a class="code" href="classnrf.html#a1c99461d7ea34e2369d32b98b6e29e1e" title="Retorna o canal de RF.">get_rf_channel</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#aa3d1221c69625052f8c4404c2be6d471" title="Configura a potência do sinal de RF.">set_rf_power</a>(<a class="code" href="nrf_8h.html#aef7c913300b68ffcbaebc2eea644580a">nrf_power_t</a> power);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    uint8_t <a class="code" href="classnrf.html#a21b2fe0aa960eee7a7d4d35af23b4498" title="Retorna a potência atual do sinal de RF.">get_rf_power</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a134b5083e12fd69e59ddd7c4ec1f86fb" title="Configura a taxa de dados (bps)">set_rf_datarate</a>(<a class="code" href="nrf_8h.html#aa8b8c2395f0b103e3558fc9b87e6c290">nrf_datarate_t</a> speed);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    uint8_t <a class="code" href="classnrf.html#a8477ed309783ba5867c0988af4c80ae0" title="Retorna a taxa de dados (bps) atual.">get_rf_datarate</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#aeacf3917c80b37ede2d9d3cc51b6bf1e" title="Configura o tamanho do endereço do dispositivo.">set_address_width</a>(<a class="code" href="nrf_8h.html#aa6e849a2def5e8b06bf877bc448c1a5e">nrf_address_width_t</a> width);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    uint8_t <a class="code" href="classnrf.html#ad9fd4f4886fcd9adc2b9fb5c843b3969" title="Retorna o tamanho do endereço atual.">get_address_width</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#adef0ba1bf3e125d353e930708b94d51d" title="Habilita pipe.">enable_rx_pipe</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, <span class="keywordtype">bool</span> auto_ack);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a75eeb6beac7627bac9341637ef7c4ef1" title="Desabilita pipe.">disable_rx_pipe</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#aceb25880996640f22d4e71ac254e0eae" title="Configura endereços de recepção.">set_rx_address</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, uint8_t *addr, uint8_t length);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a95d9ebd55679064effbdd2d83305ac98" title="Configura o tamanho do payload para recepção.">set_static_payload_width</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, uint8_t width);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    uint8_t <a class="code" href="classnrf.html#a27ec9c936d039ea105d37d02ecd3f38e" title="Retorna o tamanho do payload.">get_static_payload_width</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#af038fc525d5702ff533cd5bd014ab5ee" title="Configura o endereço de transmissão.">set_tx_address</a>(uint8_t *addr, uint8_t length);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a134acc1d52019ede259b915869c0bf5b" title="Configura os parâmetros de retransmissão.">set_retr_param</a>(uint8_t retr_count, uint8_t retr_delay);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    uint8_t <a class="code" href="classnrf.html#a6514e7743c8d8845132a16aa2de164a1" title="Retorna os parâmetros de retransmissão.">get_retr_param</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a36b6dcf9a7457520622369ec7d0efc26" title="Seleciona o argoritmo de cálculo do CRC.">set_crc_mode</a>(<a class="code" href="nrf_8h.html#a981bcae96000b642237ccc1d8b8c2ed2">nrf_crc_mode_t</a> crc_mode);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    uint8_t <a class="code" href="classnrf.html#a88b00a3dbae977c6edaf3943bb8d8728" title="Retorna o argoritmo de cálculo do CRC.">get_crc_mode</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#ad157c8856912fd56b6103fa8f940038b" title="Verifica se pacote foi recebido.">available</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a755654e2dc2c5d095e35665404efeba9" title="Bloqueia a execução do programa até a chegada de um pacote.">wait_available</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#a75f743297a4f7fc770bad6b130a17f96" title="Bloqueia a executação do programa até a chegada de um pacote ou timeout ocorrer.">wait_available_timeout</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> timeout);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#aab204842fe0a95b7962debcf8fbb7eb7" title="Escreve o payload no buffer de transmissão.">write_tx_payload</a>(uint8_t *buff, uint8_t length, <span class="keywordtype">bool</span> auto_ack=<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#a103c4967d87d8c7834d29f48ecc6853e" title="Lê o payload do pacote recebido.">read_received_payload</a>(uint8_t *buff, uint8_t *length);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classnrf.html#a08862718e5c1c3f9e9c142230af3c661" title="Aguarda o envio do pacote.">wait_packet_sent</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#ac3589416cad9c84f46ce5a279fb91835" title="Configura Interrupção externa (IRQ).">set_irq_pin</a>(uint8_t irq = 2);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a9f7f4020061591ecd91e07c0bbd30033" title="Configura a fonte de interrupção.">set_int_source</a>(<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891">nrf_int_source_t</a> int_source, <span class="keywordtype">bool</span> enable);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a7747438ae4e4b1958f1fb6fc138abd92" title="Configura o payload dinâmico.">set_dynamic_payload</a>(<a class="code" href="nrf_8h.html#ae225b55c2ff0bbaa3661eaa9c8f33aa4">nrf_address_t</a> pipe, <span class="keywordtype">boolean</span> dyn_pl);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a08d4decf99a5cc9f04697ec0b8cad1c3" title="Limpa todos os flags de interrupção.">clear_all_int_flags</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a63682fdd6cc605b1cdc576002620c4cb" title="Limpa flag de interrupção.">clear_int_flag</a>(<a class="code" href="nrf_8h.html#afd588f979a21037e3be3c29757dee891">nrf_int_source_t</a> int_source);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    uint8_t <a class="code" href="classnrf.html#a8314f44f01b6be582544289d90dce593" title="Retorna o tamanho do payload recebido.">get_received_payload_width</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    uint8_t <a class="code" href="classnrf.html#a05dbe730d7821617e94b7f94985bdf46" title="Retorna o valor do pipe em que houve recepção do último pacote.">get_data_source</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a06b19f760bcb97e16ae843401db93b10" title="Configura o modo de operação do dispositivo.">set_mode</a>(<a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">nrf_operation_mode_t</a> mode); </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">nrf_operation_mode_t</a> <a class="code" href="classnrf.html#a79f6b000ebbba48ea5b9f7d6af5d0738" title="Retorna o modo de operação corrente.">get_current_mode</a>();</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a87fe38db9329782914ef1ab204223079" title="Coloca o dispositivo no modo de operação anterior.">retrieve_last_mode</a>();</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="comment">//debug</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a1a8415dfd997f23fafdff9372556ea74" title="Imprime no terminal serial o conteúdo dos registradores de configuração.">print_registers</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#abfc4ce788178088e7a9596b730b34862" title="Imprime no terminal serial o conteúdo de um registrador ou buffer de dados.">print_buffer</a>(uint8_t *buff, uint8_t length);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="comment">/* criar funcoes */</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">//send_single_packet(destino,buffer,len,ack);</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00197"></a><span class="lineno"><a class="code" href="classnrf.html#a65df277c87190fb9ec66f4855edf61d5">  197</a></span>&#160;    uint8_t <a class="code" href="classnrf.html#a65df277c87190fb9ec66f4855edf61d5">_ce</a>; <span class="comment">//pino de CE</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">  198</a></span>&#160;    uint8_t <a class="code" href="classnrf.html#ad443b29d8052651f6c64ae972a2e4711">_csn</a>; <span class="comment">//pino de CSN</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="code" href="classnrf.html#ad81dc460edeb474b4149f3e26dbe2ede">  199</a></span>&#160;    uint8_t <a class="code" href="classnrf.html#ad81dc460edeb474b4149f3e26dbe2ede">_irq</a>; <span class="comment">//pino de IRQ</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno"><a class="code" href="classnrf.html#a507bd00d0183aaca131e672fdeabf073">  200</a></span>&#160;    <a class="code" href="nrf_8h.html#a17a9966e8563a86f23ceaf26eca0f13f">nrf_operation_mode_t</a> <a class="code" href="classnrf.html#a507bd00d0183aaca131e672fdeabf073">_last_mode</a>,<a class="code" href="classnrf.html#ad9dd481283b1352ba3a9d6c8a51b9d9b">_current_mode</a>;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    uint8_t <a class="code" href="classnrf.html#a935b975d34e9739d53c040db335faa59" title="Escreve um valor no registrador.">spi_write_register</a>(uint8_t register_addr, uint8_t data);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    uint8_t <a class="code" href="classnrf.html#adc8432f57f8406debc6d648daa85de53" title="Lê o conteúdo de um registrador.">spi_read_register</a>(uint8_t register_addr, uint8_t *data);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    uint8_t <a class="code" href="classnrf.html#abbed07bbeb60fb2090f2ffba58fab16b" title="Escreve um bloco de dados no registrador.">spi_write_multibyte_register</a>(uint8_t register_addr, uint8_t *addr, uint8_t length);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    uint8_t <a class="code" href="classnrf.html#adc8177b853777e3fe0eb806ff57971f2" title="Lê um bloco de dados do registrador.">spi_read_multibyte_register</a>(uint8_t register_addr, uint8_t *buff, uint8_t length);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    uint8_t <a class="code" href="classnrf.html#a0904f4978e6cbeb63c8a393f1ee9299f" title="Retorna o estado dos buffers de recepção e transmissão.">get_fifo_status</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    uint8_t <a class="code" href="classnrf.html#a6d5e06d2effe8579ac57e5ad648d63e7" title="Retorna o estado do dispositivo.">get_status</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a6568bbc3dab2410df222e1247b4b87d5" title="Configura o modo de potência do dispositivo.">set_power_up</a>(<span class="keywordtype">bool</span> pwr_up);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a833792eb23819e3b9c7765ad41e38578" title="Configura o modo primário do dispositivo.">set_primary_rx</a>(<span class="keywordtype">bool</span> prim_rx);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a674251450acee6d20090741155f793fa" title="Descarrega buffer de recepção.">flush_rx_fifo</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a89449d9aadc1957b3f6631780822f8be" title="Descarrega buffer de transmissão.">flush_tx_fifo</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a27c13335cdcd46659337e232f97f663c" title="Habilita o dispositivo.">chip_enable</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classnrf.html#a0093820dc7978c8cb33ea250e8847705" title="Desabilita o dispositivo.">chip_disable</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;};</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">#endif</span></div>
-</div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 27 de Dezembro de 2013 14:59:08 para nrf por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
-</small></address>
+<hr class="footer"/><address class="footer"><small>Gerado em Fri Dec 27 2013 22:19:48 para nrf por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
 </html>

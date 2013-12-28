@@ -67,7 +67,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * taxa, potência), habilitar ou não a função de 'Auto-Ack', o tamanho e tipo do payload (estático ou dinâmico),
  * algoritmo CRC, tamanho do endereço dos dispositivos, etc.
  * 
- * \subsection envio_subsec Envio de Pacotes 
+ * \subsection envio_subsec Envio de Pacotes
+ * 
+ * A seguir, descrevemos os passos necessários para enviar um pacote (dispositivo em PTX):
+ * \li Escreva o payload no buffer de TX. O número de bytes escritos será considerado como o tamanho do payload enviado.
+ * \li Configure o endereço de destino. Caso, a função auto-ack esteja habilitada,
+ * utilize esse mesmo endereço no PIPE0.
+ * \li Faça PWR_UP=1, PRIM_RX=0 e habilite o chip (CE=1). A transmissão do pacote tem início
+ * \li Verifique o flag TX_DS para determinar se o pacote foi enviado. Se o flag MAX_RETR for setado, ele precisará ser resetado, caso contrário, a transmissão de pacotes subsequentes será bloqueada. 
+ * transmissão 
+ * \li Coloque o PTX em 'stand-by' 
  * 
  * \subsection receb_subsec Recebimento de Pacotes
  * 

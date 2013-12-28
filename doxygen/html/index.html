@@ -2,43 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <title>nrf: Página principal</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
-</script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
-   <div id="projectname">nrf
-   </div>
-  </td>
- </tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- Gerado por Doxygen 1.8.1.2 -->
-<script type="text/javascript">
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript"><!--
 var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
-</script>
-  <div id="navrow1" class="tabs">
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="index.html"><span>Página&nbsp;principal</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Ficheiros</span></a></li>
-      <li>
+      <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -56,27 +37,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
       </li>
     </ul>
   </div>
-</div><!-- top -->
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valores da enumeração</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
 </div>
-
 <div class="header">
   <div class="headertitle">
-<div class="title">nrf Documentação</div>  </div>
-</div><!--header-->
+<h1>nrf Documentação</h1>  </div>
+</div>
 <div class="contents">
-<div class="textblock"><pre class="fragment">Uma biblioteca Arduino para o chip nordic nRF24L01+
+<div class="fragment"><pre class="fragment">
+Uma biblioteca Arduino para o chip nordic nRF24L01+
 Copyright (C) 2013  Khyale S. Nascimento
  
 This program is free software: you can redistribute it and/or modify
@@ -91,34 +59,53 @@ GNU General Public License for more details.
  
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-</pre><h1><a class="anchor" id="intro_sec"></a>
-Introdução</h1>
+</pre></div><h2><a class="anchor" id="intro_sec"></a>
+Introdução</h2>
 <p>Esta biblioteca define a Classe 'nrf', que implementa as principais funções para configuração e controle do chip nordic nRF24L01+. Essa biblioteca foi testada ambiente do Arduino Uno e pode ser estendida para outros ambientes como por exemplo o raspberryPi.</p>
-<h1><a class="anchor" id="chip_sec"></a>
-Chip nordic nRF24L01+</h1>
+<h2><a class="anchor" id="chip_sec"></a>
+Chip nordic nRF24L01+</h2>
 <p>O chip nRF24L01+ é uma transceptor digital que pode operar na faixa de 2,4GHz com taxas de até 2Mbps e potência de saída de até 0dBm. Ele opera em 3,3V e seu consumo é extremamente baixo, sendo ideal para aplicações de baixa potência. Além disso, é de baixo custo e já existem módulos de RF baseados neste chip que custam U$S4,00. O próprio fabricante disponibiliza nos application notes do chip o projeto de placa com antena PCB que pode ser utilizado para o desenvolvimento de diversas aplicações.</p>
-<h2><a class="anchor" id="modos_subsec"></a>
-Modos de operação</h2>
+<h3><a class="anchor" id="modos_subsec"></a>
+Modos de operação</h3>
 <p>O chip pode operar basicamente em quatro modos 'power down', 'stand-by', 'tx mode' e 'rx mode'. Ao ligar o chip, o dispositivo entra no modo 'power down' após um atraso de 100ms. Fazendo PWR_UP=1, o oscilador do sistema é ativado e ele entra no modo 'standby'.</p>
-<div class="image">
+<div align="center">
 <img src="modos_operacao.jpg" alt="modos_operacao.jpg"/>
 </div>
 <p>Para entrar no modo 'rx', devemos colocar PWR_UP=1, CE=1 e PRIM_RX=1 no registrador CONFIG. A escrita nos registros de configuração são permitidas apenas se o dispositivo estiver no modo 'standby' ou 'power-down'. No modo 'rx' os pacotes recebidos são armazenados no buffer de RX, de tamanho 32 bytes (na realidade se trata de uma FIFO de três níveis). As verificações do endereço e CRC dos pacotes são feitas automaticamente e são transparentes para o usuário.</p>
 <p>Para entrar no modo 'tx', devemos colocar PWR_UP=1, CE=1 e PRIM_RX=0 no registrador CONFIG. Nesse modo o dispositivo monta os pacotes a partir do payload escrito no buffer de TX, de tamanho 32 bytes (o FIFO de TX também é de três níveis). Após o buffer ficar vazio, o sistema automaticamente faz o dispositivo entrar num estado intermediário ('standbyII'), a fim de economizar energia.</p>
 <p>Antes de utilizar o dispositivos, nós devemos configurar os endereços de recepção ou pipes (o dispositivo pode receber simultaneamente pacotes de até 6 fontes distintas), os parâmetros de RF (canal, taxa, potência), habilitar ou não a função de 'Auto-Ack', o tamanho e tipo do payload (estático ou dinâmico), algoritmo CRC, tamanho do endereço dos dispositivos, etc.</p>
-<h2><a class="anchor" id="envio_subsec"></a>
-Envio de Pacotes</h2>
-<h2><a class="anchor" id="receb_subsec"></a>
-Recebimento de Pacotes</h2>
-<h1><a class="anchor" id="classe_sec"></a>
-Classe nrf</h1>
+<h3><a class="anchor" id="envio_subsec"></a>
+Envio de Pacotes</h3>
+<p>A seguir, descrevemos os passos necessários para enviar um pacote (dispositivo em PTX): </p>
+<ul>
+<li>Escreva o payload no buffer de TX. O número de bytes escritos será considerado como o tamanho do payload enviado. </li>
+<li>Configure o endereço de destino. Caso, a função auto-ack esteja habilitada, utilize esse mesmo endereço no PIPE0. </li>
+<li>Faça PWR_UP=1, PRIM_RX=0 e habilite o chip (CE=1). A transmissão do pacote tem início </li>
+<li>Verifique o flag TX_DS para determinar se o pacote foi enviado. Se o flag MAX_RETR for setado, ele precisará ser resetado, caso contrário, a transmissão de pacotes subsequentes será bloqueada. transmissão </li>
+<li>Coloque o PTX em 'stand-by'</li>
+</ul>
+<h3><a class="anchor" id="receb_subsec"></a>
+Recebimento de Pacotes</h3>
+<h2><a class="anchor" id="classe_sec"></a>
+Classe nrf</h2>
 <p>A classe foi implementada para auxiliar no desenvolvimento de aplicações do Arduino que utilizem o chip da Nordic nRF24L01+. Existem métodos de configuração dos registradores, verificação de estados, mudança nos modos de operação. Este arquivo html traz a documentação da Classe 'nrf' e um exemplo de utilização, que foi testado no ambiente Arduino Uno. </p>
-</div></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 27 de Dezembro de 2013 14:59:08 para nrf por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
-</small></address>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Valores da enumeração</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Fri Dec 27 2013 22:19:48 para nrf por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
 </html>
